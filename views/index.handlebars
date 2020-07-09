@@ -1,20 +1,36 @@
 <h1>EAT THE VEGGIE BURGER</h1>
 
-<h2>Enter the type of burger you'd like</h2>
-
+<h2>MUST DEVOURE 'EM ALL!</h2>
+ 
+<ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+        {{> burgers/burgers-block devoured=true}}
+    {{/unless}}
+    {{/each}}
+</ul>
+     
+<h2>VEGGIE BURGERS DEVOURED:</h2>
+    <ul>
+        {{#each burgers}}
+            {{#if devoured}}
+                {{> burgers/burgers-block devoured=false}}
+            {{/if}}
+        {{/each}}
+    </ul>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
 
   <div class="form-group">
-    <label for="ca">Burger Name</label>
+    <label for="ca">Veggie Burger Name:</label>
     <input type="text" id="ca" name="name">
   </div>
 
   <div class="form-group">
-    <label for="slee">Devoured!</label><br>
-    <input type="radio" name="sleepy" value="1" checked>Devoured!<br>
-    <input type="radio" name="sleepy" value="0"> Not Devoured Yet
+    <label for="devoured">Devoured!</label><br>
+    <input type="radio" name="devoured" value="1" checked>Devoured!<br>
+    <input type="radio" name="devoured" value="0"> Not Devoured Yet
   </div>
 
   <button type="submit">Add a Burger</button>
