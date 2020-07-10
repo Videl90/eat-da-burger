@@ -11,6 +11,10 @@ body {
     font-family: 'Sofia', cursive;
   }
 
+ .card-title{
+    margin-bottom:30px;
+  }
+
   .btn-primary {
     background-color: #84BD00;
     border: none;
@@ -31,7 +35,7 @@ body {
 
   .card {
     background-color: #364E73;
-    width: 22rem!important;
+    width: 35rem!important;
     margin:0 auto;
     margin-top:30px;
   }
@@ -48,7 +52,7 @@ body {
   
   .card-1 {
     background-color: #364E73;
-    width: 22rem!important;
+    width: 35rem!important;
     float:left;
   }
 
@@ -63,4 +67,9 @@ body {
   .form{
     margin-bottom: 50px;
     padding-bottom: 30px;
+  }
+
+  .form-control {
+    width:400px;
+    margin:0 auto;
   }
